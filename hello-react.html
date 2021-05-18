@@ -7,16 +7,19 @@
             <script src="https://fb.me/react-dom-0.14.0.js"></script> -->            
             <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-with-addons.js" integrity="sha512-O0+VqyNgfS5VvTKpaXY8Lz/PBSCXVO9hOJfdnBxrI3W+kjyLSqQ/L00Tf33FXZtE+l7ojaqyTrrHMToauNb98g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js" integrity="sha512-QzY981zOXSo23FnoDHCmXOWdx4Jtyemi+8IlSYinUG9uifyGpFXSFFX23zVl31i7dAZdVjclqyuue11+jQ+TiA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/JSXTransformer.js" integrity="sha512-DEtggkCtkvRjIFFfWmcIacA9jthEZFebAvrSxqKrGe03BdLEvtVSKIx1eL/FxFoEKvD0ddqEch+/KuwqqvOuAA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         </head>
-        <body>
-            <script>
+        <body>            
+            <script type="text/jsx">
                 var HelloReact = React.createClass({
                     render: function() {
-                        return React.DOM.h1(null, 'Hello React');
+                        return <h1>Hello React</h1>;
                     }
                 });
 
-                ReactDOM.render(React.createElement(HelloReact), document.body);
+                ReactDOM.render(<HelloReact />, document.getElementById('view'));
             </script>
+
+            <div id="view" />
         </body>
     </html>
